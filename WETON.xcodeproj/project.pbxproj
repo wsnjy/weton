@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65A944101B22FE2400B88456 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9440F1B22FE2400B88456 /* main.m */; };
+		65A944131B22FE2400B88456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A944121B22FE2400B88456 /* AppDelegate.m */; };
+		65A944161B22FE2400B88456 /* WETON.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65A944141B22FE2400B88456 /* WETON.xcdatamodeld */; };
+		65A944191B22FE2400B88456 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A944181B22FE2400B88456 /* ViewController.m */; };
+		65A9441C1B22FE2400B88456 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65A9441A1B22FE2400B88456 /* Main.storyboard */; };
+		65A9441E1B22FE2400B88456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A9441D1B22FE2400B88456 /* Images.xcassets */; };
+		65A944211B22FE2400B88456 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A9441F1B22FE2400B88456 /* LaunchScreen.xib */; };
+		65A9442D1B22FE2400B88456 /* WETONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9442C1B22FE2400B88456 /* WETONTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65A944271B22FE2400B88456 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65A944021B22FE2400B88456 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65A944091B22FE2400B88456;
+			remoteInfo = WETON;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		65A9440A1B22FE2400B88456 /* WETON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WETON.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A9440E1B22FE2400B88456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A9440F1B22FE2400B88456 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		65A944111B22FE2400B88456 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		65A944121B22FE2400B88456 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65A944151B22FE2400B88456 /* WETON.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WETON.xcdatamodel; sourceTree = "<group>"; };
+		65A944171B22FE2400B88456 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		65A944181B22FE2400B88456 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		65A9441B1B22FE2400B88456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65A9441D1B22FE2400B88456 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		65A944201B22FE2400B88456 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		65A944261B22FE2400B88456 /* WETONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WETONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65A9442B1B22FE2400B88456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65A9442C1B22FE2400B88456 /* WETONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WETONTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65A944071B22FE2400B88456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A944231B22FE2400B88456 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65A944011B22FE2400B88456 = {
+			isa = PBXGroup;
+			children = (
+				65A9440C1B22FE2400B88456 /* WETON */,
+				65A944291B22FE2400B88456 /* WETONTests */,
+				65A9440B1B22FE2400B88456 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65A9440B1B22FE2400B88456 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65A9440A1B22FE2400B88456 /* WETON.app */,
+				65A944261B22FE2400B88456 /* WETONTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65A9440C1B22FE2400B88456 /* WETON */ = {
+			isa = PBXGroup;
+			children = (
+				65A944111B22FE2400B88456 /* AppDelegate.h */,
+				65A944121B22FE2400B88456 /* AppDelegate.m */,
+				65A944171B22FE2400B88456 /* ViewController.h */,
+				65A944181B22FE2400B88456 /* ViewController.m */,
+				65A9441A1B22FE2400B88456 /* Main.storyboard */,
+				65A9441D1B22FE2400B88456 /* Images.xcassets */,
+				65A9441F1B22FE2400B88456 /* LaunchScreen.xib */,
+				65A944141B22FE2400B88456 /* WETON.xcdatamodeld */,
+				65A9440D1B22FE2400B88456 /* Supporting Files */,
+			);
+			path = WETON;
+			sourceTree = "<group>";
+		};
+		65A9440D1B22FE2400B88456 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65A9440E1B22FE2400B88456 /* Info.plist */,
+				65A9440F1B22FE2400B88456 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		65A944291B22FE2400B88456 /* WETONTests */ = {
+			isa = PBXGroup;
+			children = (
+				65A9442C1B22FE2400B88456 /* WETONTests.m */,
+				65A9442A1B22FE2400B88456 /* Supporting Files */,
+			);
+			path = WETONTests;
+			sourceTree = "<group>";
+		};
+		65A9442A1B22FE2400B88456 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65A9442B1B22FE2400B88456 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65A944091B22FE2400B88456 /* WETON */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65A944301B22FE2400B88456 /* Build configuration list for PBXNativeTarget "WETON" */;
+			buildPhases = (
+				65A944061B22FE2400B88456 /* Sources */,
+				65A944071B22FE2400B88456 /* Frameworks */,
+				65A944081B22FE2400B88456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WETON;
+			productName = WETON;
+			productReference = 65A9440A1B22FE2400B88456 /* WETON.app */;
+			productType = "com.apple.product-type.application";
+		};
+		65A944251B22FE2400B88456 /* WETONTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65A944331B22FE2400B88456 /* Build configuration list for PBXNativeTarget "WETONTests" */;
+			buildPhases = (
+				65A944221B22FE2400B88456 /* Sources */,
+				65A944231B22FE2400B88456 /* Frameworks */,
+				65A944241B22FE2400B88456 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65A944281B22FE2400B88456 /* PBXTargetDependency */,
+			);
+			name = WETONTests;
+			productName = WETONTests;
+			productReference = 65A944261B22FE2400B88456 /* WETONTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65A944021B22FE2400B88456 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = wsnjy;
+				TargetAttributes = {
+					65A944091B22FE2400B88456 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					65A944251B22FE2400B88456 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = 65A944091B22FE2400B88456;
+					};
+				};
+			};
+			buildConfigurationList = 65A944051B22FE2400B88456 /* Build configuration list for PBXProject "WETON" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65A944011B22FE2400B88456;
+			productRefGroup = 65A9440B1B22FE2400B88456 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65A944091B22FE2400B88456 /* WETON */,
+				65A944251B22FE2400B88456 /* WETONTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65A944081B22FE2400B88456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A9441C1B22FE2400B88456 /* Main.storyboard in Resources */,
+				65A944211B22FE2400B88456 /* LaunchScreen.xib in Resources */,
+				65A9441E1B22FE2400B88456 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A944241B22FE2400B88456 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65A944061B22FE2400B88456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A944131B22FE2400B88456 /* AppDelegate.m in Sources */,
+				65A944161B22FE2400B88456 /* WETON.xcdatamodeld in Sources */,
+				65A944191B22FE2400B88456 /* ViewController.m in Sources */,
+				65A944101B22FE2400B88456 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65A944221B22FE2400B88456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65A9442D1B22FE2400B88456 /* WETONTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65A944281B22FE2400B88456 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65A944091B22FE2400B88456 /* WETON */;
+			targetProxy = 65A944271B22FE2400B88456 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		65A9441A1B22FE2400B88456 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65A9441B1B22FE2400B88456 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		65A9441F1B22FE2400B88456 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65A944201B22FE2400B88456 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65A9442E1B22FE2400B88456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		65A9442F1B22FE2400B88456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65A944311B22FE2400B88456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WETON/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		65A944321B22FE2400B88456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WETON/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		65A944341B22FE2400B88456 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WETONTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WETON.app/WETON";
+			};
+			name = Debug;
+		};
+		65A944351B22FE2400B88456 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WETONTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WETON.app/WETON";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65A944051B22FE2400B88456 /* Build configuration list for PBXProject "WETON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A9442E1B22FE2400B88456 /* Debug */,
+				65A9442F1B22FE2400B88456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65A944301B22FE2400B88456 /* Build configuration list for PBXNativeTarget "WETON" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A944311B22FE2400B88456 /* Debug */,
+				65A944321B22FE2400B88456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		65A944331B22FE2400B88456 /* Build configuration list for PBXNativeTarget "WETONTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65A944341B22FE2400B88456 /* Debug */,
+				65A944351B22FE2400B88456 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		65A944141B22FE2400B88456 /* WETON.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				65A944151B22FE2400B88456 /* WETON.xcdatamodel */,
+			);
+			currentVersion = 65A944151B22FE2400B88456 /* WETON.xcdatamodel */;
+			path = WETON.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 65A944021B22FE2400B88456 /* Project object */;
+}
