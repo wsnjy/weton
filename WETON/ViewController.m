@@ -14,11 +14,14 @@
 
 @implementation ViewController
 
+@synthesize managedObjectContext;
+
 - (void)viewDidLoad {
     
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+    // Inisialisasi weton
     NSArray *weton = @[@"Pon",
                        @"Wage",
                        @"Kliwon",
@@ -27,23 +30,36 @@
                        ];
 
     
+    // setting format tanggal
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
     [format setDateFormat:@"yyyy-MM-dd"];
     
+    // bikin patokan tanggal (pon)
     NSDate *init = [format dateFromString:@"2015-06-03"];
+    
+    // input data
     NSDate *parsed = [format dateFromString:@"2015-06-08"];
     
-    NSLog(@"now %@",parsed);
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"EEEE"];
+    // format untuk nama hari
+    [format setDateFormat:@"EEEE"];
+    NSString *dayName = [format stringFromDate:parsed];
 
-    NSString *dayName = [dateFormatter stringFromDate:parsed];
-
-    
+    // hitung selisih hari
     int selisih = floor( ([self daysBetween:parsed and:init]));
+    
+    // dapatkan wetonnya dengan menggunakan rumus untuk mendapatkan index array weton
     NSString *wetonnya = weton[selisih % 5 < 0 ? (5 + selisih % 5) : selisih % 5];
+    
+    // mencari komponen bulan
+    NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth fromDate:parsed];
+    int month = (int)[components month];
 
-    NSLog(@"wetonnya  %@ %@",[self convertNamaHari:dayName],wetonnya);
+    [format setDateFormat:@"dd"];
+    NSString *day = [format stringFromDate:parsed];
+    [format setDateFormat:@"yyyy"];
+    NSString *year = [format stringFromDate:parsed];
+    
+    NSLog(@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@ %@",day,[self bulan:month],year,[self convertNamaHari:dayName],wetonnya);
     
     
     if (managedObjectContext == nil) {
@@ -68,6 +84,29 @@
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *components = [calendar components:unitFlags fromDate:dt1 toDate:dt2 options:0];
     return [components day];
+}
+
+- (NSString *)bulan:(int)month{
+
+    
+    NSArray *arrayBulan = @[@"Januari",
+                           @"Febuari",
+                           @"Maret",
+                           @"April",
+                           @"Mei",
+                           @"Juni",
+                           @"Juli",
+                           @"Agustus",
+                           @"September",
+                           @"Oktober",
+                           @"November",
+                           @"Desember",
+                            ];
+    
+    NSString *namaBulan = arrayBulan[month-1];
+    
+    return namaBulan;
+    
 }
 
 - (NSString *)convertNamaHari:(NSString *)day{
