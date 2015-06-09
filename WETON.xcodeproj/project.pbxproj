@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		652A883D1B26C954002CFCE7 /* Data_weton.m in Sources */ = {isa = PBXBuildFile; fileRef = 652A883C1B26C954002CFCE7 /* Data_weton.m */; };
 		65A944101B22FE2400B88456 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9440F1B22FE2400B88456 /* main.m */; };
 		65A944131B22FE2400B88456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A944121B22FE2400B88456 /* AppDelegate.m */; };
 		65A944161B22FE2400B88456 /* WETON.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 65A944141B22FE2400B88456 /* WETON.xcdatamodeld */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		652A883B1B26C954002CFCE7 /* Data_weton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Data_weton.h; sourceTree = "<group>"; };
+		652A883C1B26C954002CFCE7 /* Data_weton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Data_weton.m; sourceTree = "<group>"; };
 		65A9440A1B22FE2400B88456 /* WETON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WETON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A9440E1B22FE2400B88456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A9440F1B22FE2400B88456 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +94,8 @@
 				65A9441D1B22FE2400B88456 /* Images.xcassets */,
 				65A9441F1B22FE2400B88456 /* LaunchScreen.xib */,
 				65A944141B22FE2400B88456 /* WETON.xcdatamodeld */,
+				652A883B1B26C954002CFCE7 /* Data_weton.h */,
+				652A883C1B26C954002CFCE7 /* Data_weton.m */,
 				65A9440D1B22FE2400B88456 /* Supporting Files */,
 			);
 			path = WETON;
@@ -224,6 +229,7 @@
 			files = (
 				65A944131B22FE2400B88456 /* AppDelegate.m in Sources */,
 				65A944161B22FE2400B88456 /* WETON.xcdatamodeld in Sources */,
+				652A883D1B26C954002CFCE7 /* Data_weton.m in Sources */,
 				65A944191B22FE2400B88456 /* ViewController.m in Sources */,
 				65A944101B22FE2400B88456 /* main.m in Sources */,
 			);
@@ -420,6 +426,7 @@
 				65A944321B22FE2400B88456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		65A944331B22FE2400B88456 /* Build configuration list for PBXNativeTarget "WETONTests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +435,7 @@
 				65A944351B22FE2400B88456 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

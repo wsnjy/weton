@@ -6,29 +6,6 @@
 //  Copyright (c) 2015 wsnjy. All rights reserved.
 //
 
-/*
- $init = strtotime('1990-05-15');
- $weton = [
- 0 => 'Pon',
- 1 => 'Wage',
- 2 => 'Kliwon',
- 3 => 'Legi',
- 4 => 'Pahing',
- ];
- 
- $input_tanggal = '01-01-2010';
- 
- $tanggal_cari = DateTime::createFromFormat('d-m-Y',$input_tanggal);
- $selisih = floor(($tanggal_cari->getTimestamp() - $init) / (60 * 60 * 24));
- $weton_anda = $weton[$selisih % 5 < 0 ? (5  + $selisih % 5) : $selisih % 5];
- 
- echo "input tanggal: ". strftime('%d %B %Y', $tanggal_cari->getTimestamp());
- echo "<br>";
- echo strftime('%A',$tanggal_cari->getTimestamp());
- echo " ";
- echo $weton_anda;
- */
-
 #import "ViewController.h"
 
 @interface ViewController ()
@@ -38,12 +15,9 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    NSDateFormatter *format = [[NSDateFormatter alloc] init];
-    NSString *init = [format dateFromString:@"1990-05-15"];
-
     
     NSArray *weton = @[@"Pon",
                        @"Wage",
@@ -53,24 +27,70 @@
                        ];
 
     
-    [format setDateFormat:@"d-m-Y"];
-    NSDate *now = [[NSDate alloc] init];
-    NSString *dateString = [format stringFromDate:now];
-    NSLog(@"The time: %@", dateString);
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy-MM-dd"];
     
-    NSDate *parsed = [format dateFromString:@"01-01-2010"];
-    NSLog(@"The time: %@", [format stringFromDate:parsed]);
+    NSDate *init = [format dateFromString:@"2015-06-03"];
+    NSDate *parsed = [format dateFromString:@"2015-06-08"];
+    
+    NSLog(@"now %@",parsed);
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE"];
+
+    NSString *dayName = [dateFormatter stringFromDate:parsed];
 
     
-    
-    NSString *input_tanggal = @"01-01-2010";
-    
-    NSString *hari = @"";
-    
-    NSString *wetonnya = @"";
+    int selisih = floor( ([self daysBetween:parsed and:init]));
+    NSString *wetonnya = weton[selisih % 5 < 0 ? (5 + selisih % 5) : selisih % 5];
+
+    NSLog(@"wetonnya  %@ %@",[self convertNamaHari:dayName],wetonnya);
     
     
-    NSLog(@"weton anda %@ %@", hari,wetonnya);
+    if (managedObjectContext == nil) {
+        managedObjectContext = [self managedObjectContext];
+    }
+
+
+}
+
+- (NSManagedObjectContext *)managedObjectContext {
+    NSManagedObjectContext *context = nil;
+    id delegate = [[UIApplication sharedApplication] delegate];
+    if ([delegate performSelector:@selector(managedObjectContext)]) {
+        context = [delegate managedObjectContext];
+    }
+    return context;
+}
+
+
+- (long)daysBetween:(NSDate *)dt1 and:(NSDate *)dt2 {
+    NSUInteger unitFlags = NSCalendarUnitDay;
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [calendar components:unitFlags fromDate:dt1 toDate:dt2 options:0];
+    return [components day];
+}
+
+- (NSString *)convertNamaHari:(NSString *)day{
+    
+    NSString *namaHari;
+    
+    if ([day isEqualToString:@"Monday"]) {
+        namaHari = @"Senin";
+    }else if ([day isEqualToString:@"Tuesday"]){
+        namaHari = @"Selasa";
+    }else if ([day isEqualToString:@"Wednesday"]){
+        namaHari = @"Rabu";
+    }else if ([day isEqualToString:@"Thursday"]){
+        namaHari = @"Kamis";
+    }else if ([day isEqualToString:@"Friday"]){
+        namaHari = @"Jumat";
+    }else if ([day isEqualToString:@"Saturday"]){
+        namaHari = @"Sabtu";
+    }else{
+        namaHari = @"Ahad";
+    }
+    
+    return namaHari;
     
 }
 

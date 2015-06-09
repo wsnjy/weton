@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Data_weton.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController{
+    NSManagedObjectContext *managedObjectContext;
+}
 
+@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
 
