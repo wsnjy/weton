@@ -64,17 +64,12 @@
 
     NSString *weton_lengkap = [NSString stringWithFormat:@"%@ %@",[self convertNamaHari:dayName],wetonnya];
     
-    NSLog(@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@",day,[self bulan:month],year,weton_lengkap);
-
-    NSLog(@"deskripsinya %@",[[self getLocalJson:weton_lengkap] objectForKey:@"deskripsi"]);
-    
+    NSLog(@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@ \n %@",day,[self bulan:month],year,weton_lengkap, [[self getLocalJson:weton_lengkap] objectForKey:@"deskripsi"]);
     
 }
 
 - (NSDictionary *)getLocalJson:(NSString *)wetonnya{
     
-    NSLog(@"wetonnya %@",wetonnya);
-
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"mbuh" ofType:@"json"];
     NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:nil];
     NSArray *jsoncat = [[NSArray alloc] initWithArray:[NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableContainers error:nil]];
@@ -83,9 +78,8 @@
     
     for (NSDictionary  *dict in jsoncat) {
         
-        if ([[dict objectForKey:@"nama_weton"] isEqualToString:@"Senin Kliwon"]) {
+        if ([[dict objectForKey:@"nama_weton"] isEqualToString:wetonnya]) {
             jsonWeton = dict;
-            NSLog(@"dict %@",dict);
         }
 
     }

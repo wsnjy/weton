@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6515051C1B294B6300A24904 /* weton.json in Resources */ = {isa = PBXBuildFile; fileRef = 6515051B1B294B6300A24904 /* weton.json */; };
+		650286E11B294EDD000D59B7 /* mbuh.json in Resources */ = {isa = PBXBuildFile; fileRef = 650286E01B294EDD000D59B7 /* mbuh.json */; };
 		65A944101B22FE2400B88456 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9440F1B22FE2400B88456 /* main.m */; };
 		65A944131B22FE2400B88456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A944121B22FE2400B88456 /* AppDelegate.m */; };
 		65A944191B22FE2400B88456 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A944181B22FE2400B88456 /* ViewController.m */; };
@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6515051B1B294B6300A24904 /* weton.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = weton.json; sourceTree = "<group>"; };
+		650286E01B294EDD000D59B7 /* mbuh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mbuh.json; sourceTree = "<group>"; };
 		65A9440A1B22FE2400B88456 /* WETON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WETON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A9440E1B22FE2400B88456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A9440F1B22FE2400B88456 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		65A9440D1B22FE2400B88456 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6515051B1B294B6300A24904 /* weton.json */,
+				650286E01B294EDD000D59B7 /* mbuh.json */,
 				65A9440E1B22FE2400B88456 /* Info.plist */,
 				65A9440F1B22FE2400B88456 /* main.m */,
 			);
@@ -203,8 +203,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65A9441C1B22FE2400B88456 /* Main.storyboard in Resources */,
+				650286E11B294EDD000D59B7 /* mbuh.json in Resources */,
 				65A944211B22FE2400B88456 /* LaunchScreen.xib in Resources */,
-				6515051C1B294B6300A24904 /* weton.json in Resources */,
 				65A9441E1B22FE2400B88456 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
