@@ -10,11 +10,13 @@
 
 @interface ViewController ()
 
+@property (nonatomic, retain) NSString *deskripsi_weton;
+
 @end
 
 @implementation ViewController
 
-@synthesize managedObjectContext;
+@synthesize deskripsi_weton;
 
 - (void)viewDidLoad {
     
@@ -38,14 +40,14 @@
     NSDate *init = [format dateFromString:@"2015-06-03"];
     
     // input data
-    NSDate *parsed = [format dateFromString:@"2015-06-08"];
+    NSDate *parsed = [format dateFromString:@"1989-02-06"];
     
     // format untuk nama hari
     [format setDateFormat:@"EEEE"];
     NSString *dayName = [format stringFromDate:parsed];
 
     // hitung selisih hari
-    int selisih = floor( ([self daysBetween:parsed and:init]));
+    int selisih = floor( ([self daysBetween:init and:parsed]));
     
     // dapatkan wetonnya dengan menggunakan rumus untuk mendapatkan index array weton
     NSString *wetonnya = weton[selisih % 5 < 0 ? (5 + selisih % 5) : selisih % 5];
@@ -59,23 +61,36 @@
     [format setDateFormat:@"yyyy"];
     NSString *year = [format stringFromDate:parsed];
     
-    NSLog(@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@ %@",day,[self bulan:month],year,[self convertNamaHari:dayName],wetonnya);
+
+    NSString *weton_lengkap = [NSString stringWithFormat:@"%@ %@",[self convertNamaHari:dayName],wetonnya];
+    
+    NSLog(@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@",day,[self bulan:month],year,weton_lengkap);
+
+    NSLog(@"deskripsinya %@",[[self getLocalJson:weton_lengkap] objectForKey:@"deskripsi"]);
     
     
-    if (managedObjectContext == nil) {
-        managedObjectContext = [self managedObjectContext];
-    }
-
-
 }
 
-- (NSManagedObjectContext *)managedObjectContext {
-    NSManagedObjectContext *context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-        context = [delegate managedObjectContext];
+- (NSDictionary *)getLocalJson:(NSString *)wetonnya{
+    
+    NSLog(@"wetonnya %@",wetonnya);
+
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"mbuh" ofType:@"json"];
+    NSData *JSONData = [NSData dataWithContentsOfFile:filePath options:NSDataReadingMappedIfSafe error:nil];
+    NSArray *jsoncat = [[NSArray alloc] initWithArray:[NSJSONSerialization JSONObjectWithData:JSONData options:NSJSONReadingMutableContainers error:nil]];
+    
+    NSDictionary *jsonWeton = [[NSDictionary alloc] init];
+    
+    for (NSDictionary  *dict in jsoncat) {
+        
+        if ([[dict objectForKey:@"nama_weton"] isEqualToString:@"Senin Kliwon"]) {
+            jsonWeton = dict;
+            NSLog(@"dict %@",dict);
+        }
+
     }
-    return context;
+    
+    return jsonWeton;
 }
 
 
@@ -83,6 +98,8 @@
     NSUInteger unitFlags = NSCalendarUnitDay;
     NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *components = [calendar components:unitFlags fromDate:dt1 toDate:dt2 options:0];
+    
+    
     return [components day];
 }
 
@@ -132,6 +149,8 @@
     return namaHari;
     
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
