@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController{
+@interface ViewController : UIViewController <UITextFieldDelegate>{
     NSManagedObjectContext *managedObjectContext;
 }
 
+@property (weak, nonatomic) IBOutlet UITextField *textFieldDate;
 
 @end
 

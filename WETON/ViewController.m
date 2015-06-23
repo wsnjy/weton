@@ -11,17 +11,47 @@
 @interface ViewController ()
 
 @property (nonatomic, retain) NSString *deskripsi_weton;
+@property (weak, nonatomic) IBOutlet UIDatePicker *datePicker;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancel;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *Done;
+@property (weak, nonatomic) IBOutlet UIView *viewDatePicker;
+@property (weak, nonatomic) IBOutlet UIButton *btnCari;
 
 @end
 
 @implementation ViewController
 
 @synthesize deskripsi_weton;
+@synthesize textFieldDate;
+@synthesize datePicker;
+@synthesize viewDatePicker;
+@synthesize btnCari;
 
-- (void)viewDidLoad {
+- (IBAction)cancelBarDatePicker:(id)sender {
     
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    textFieldDate.text = @"Masukkan tanggal Lahir";
+    [textFieldDate resignFirstResponder];
+    viewDatePicker.hidden = YES;
+    btnCari.enabled = NO;
+    
+}
+
+- (IBAction)doneBarDatePicker:(id)sender {
+    
+    if (textFieldDate.text.length == 0) {
+        [self cancelBarDatePicker:sender];
+    }else{
+        btnCari.enabled = YES;
+    }
+    
+    viewDatePicker.hidden = YES;
+    [textFieldDate resignFirstResponder];
+
+}
+
+- (IBAction)btnCariAction:(id)sender {
+    
+    NSLog(@"btn cari action");
     
     // Inisialisasi weton
     NSArray *weton = @[@"Pon",
@@ -30,7 +60,7 @@
                        @"Legi",
                        @"Pahing"
                        ];
-
+    
     
     // setting format tanggal
     NSDateFormatter *format = [[NSDateFormatter alloc] init];
@@ -40,12 +70,13 @@
     NSDate *init = [format dateFromString:@"2015-06-03"];
     
     // input data
-    NSDate *parsed = [format dateFromString:@"1989-02-06"];
+    NSString *date = [format stringFromDate:datePicker.date];
+    NSDate *parsed = [format dateFromString:date];
     
     // format untuk nama hari
     [format setDateFormat:@"EEEE"];
     NSString *dayName = [format stringFromDate:parsed];
-
+    
     // hitung selisih hari
     int selisih = floor( ([self daysBetween:init and:parsed]));
     
@@ -55,18 +86,58 @@
     // mencari komponen bulan
     NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitMonth fromDate:parsed];
     int month = (int)[components month];
-
+    
     [format setDateFormat:@"dd"];
     NSString *day = [format stringFromDate:parsed];
     [format setDateFormat:@"yyyy"];
     NSString *year = [format stringFromDate:parsed];
     
-
+    
     NSString *weton_lengkap = [NSString stringWithFormat:@"%@ %@",[self convertNamaHari:dayName],wetonnya];
     
     NSLog(@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@ \n %@",day,[self bulan:month],year,weton_lengkap, [[self getLocalJson:weton_lengkap] objectForKey:@"deskripsi"]);
+
+    
     
 }
+
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    
+    viewDatePicker.hidden = YES;
+    
+    self.title = @"WETON";
+    
+    
+    datePicker.datePickerMode = UIDatePickerModeDate;
+    [datePicker setDate:[NSDate date]];
+    [datePicker setMaximumDate:[NSDate date]];
+    [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
+//    [textFieldDate setInputView:viewDatePicker];
+    textFieldDate.delegate = self;
+    
+}
+
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    textFieldDate.text = @"";
+    viewDatePicker.hidden = NO;
+}
+
+
+-(void)updateTextField:(id)sender
+{
+//    UIDatePicker *picker = (UIDatePicker*)textFieldDate.inputView;
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"dd-MM-YYYY"];
+    NSString *date = [dateFormat stringFromDate:datePicker.date];
+    textFieldDate.text = [NSString stringWithFormat:@"%@",date];
+
+}
+
+
 
 - (NSDictionary *)getLocalJson:(NSString *)wetonnya{
     
@@ -137,7 +208,7 @@
     }else if ([day isEqualToString:@"Saturday"]){
         namaHari = @"Sabtu";
     }else{
-        namaHari = @"Ahad";
+        namaHari = @"Minggu";
     }
     
     return namaHari;
