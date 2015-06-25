@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *Done;
 @property (weak, nonatomic) IBOutlet UIView *viewDatePicker;
 @property (weak, nonatomic) IBOutlet UIButton *btnCari;
+@property (weak, nonatomic) IBOutlet UIView *viewDeskripsi;
+@property (weak, nonatomic) IBOutlet UITextView *textDeskripsi;
 
 @end
 
@@ -26,6 +28,7 @@
 @synthesize datePicker;
 @synthesize viewDatePicker;
 @synthesize btnCari;
+@synthesize viewDeskripsi, textDeskripsi;
 
 - (IBAction)cancelBarDatePicker:(id)sender {
     
@@ -96,7 +99,9 @@
     NSString *weton_lengkap = [NSString stringWithFormat:@"%@ %@",[self convertNamaHari:dayName],wetonnya];
     
     NSLog(@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@ \n %@",day,[self bulan:month],year,weton_lengkap, [[self getLocalJson:weton_lengkap] objectForKey:@"deskripsi"]);
-
+    NSString *stringHasil = [NSString stringWithFormat:@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@ \n %@",day,[self bulan:month],year,weton_lengkap, [[self getLocalJson:weton_lengkap] objectForKey:@"deskripsi"]];
+    
+    textDeskripsi.text = stringHasil;
     
     
 }
@@ -116,12 +121,12 @@
     [datePicker setDate:[NSDate date]];
     [datePicker setMaximumDate:[NSDate date]];
     [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
-//    [textFieldDate setInputView:viewDatePicker];
     textFieldDate.delegate = self;
     
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
+    [textFieldDate resignFirstResponder];
     textFieldDate.text = @"";
     viewDatePicker.hidden = NO;
 }
@@ -131,7 +136,9 @@
 {
 //    UIDatePicker *picker = (UIDatePicker*)textFieldDate.inputView;
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-    [dateFormat setDateFormat:@"dd-MM-YYYY"];
+    [dateFormat setTimeZone:[NSTimeZone localTimeZone]];
+    [dateFormat setDateFormat:@"dd MMMM YYYY"];
+//    [dateFormat setDateFormat:@"dd-MM-YYYY"];
     NSString *date = [dateFormat stringFromDate:datePicker.date];
     textFieldDate.text = [NSString stringWithFormat:@"%@",date];
 
