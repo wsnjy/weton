@@ -11,7 +11,9 @@
 		653F981D1B3A7A30004A26BE /* dukun.png in Resources */ = {isa = PBXBuildFile; fileRef = 653F981C1B3A7A30004A26BE /* dukun.png */; };
 		6555CD671B3BFA7700375E0C /* arrowAbout.png in Resources */ = {isa = PBXBuildFile; fileRef = 6555CD661B3BFA7700375E0C /* arrowAbout.png */; };
 		6555CD6A1B3BFAD600375E0C /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6555CD691B3BFAD600375E0C /* AboutController.m */; };
-		6555CD6C1B3C01A900375E0C /* dukunAbout.png in Resources */ = {isa = PBXBuildFile; fileRef = 6555CD6B1B3C01A900375E0C /* dukunAbout.png */; };
+		659BB9A81B42A3E000C4E670 /* logo-aboutus.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BB9A71B42A3E000C4E670 /* logo-aboutus.png */; };
+		659BB9AA1B42A4B100C4E670 /* dukun-aboutus.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BB9A91B42A4B100C4E670 /* dukun-aboutus.png */; };
+		659BB9AC1B42B8E900C4E670 /* pembatas-aboutus.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BB9AB1B42B8E900C4E670 /* pembatas-aboutus.png */; };
 		65A944101B22FE2400B88456 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9440F1B22FE2400B88456 /* main.m */; };
 		65A944131B22FE2400B88456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A944121B22FE2400B88456 /* AppDelegate.m */; };
 		65A944191B22FE2400B88456 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A944181B22FE2400B88456 /* ViewController.m */; };
@@ -37,7 +39,9 @@
 		6555CD661B3BFA7700375E0C /* arrowAbout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowAbout.png; sourceTree = "<group>"; };
 		6555CD681B3BFAD600375E0C /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		6555CD691B3BFAD600375E0C /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
-		6555CD6B1B3C01A900375E0C /* dukunAbout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dukunAbout.png; sourceTree = "<group>"; };
+		659BB9A71B42A3E000C4E670 /* logo-aboutus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-aboutus.png"; sourceTree = "<group>"; };
+		659BB9A91B42A4B100C4E670 /* dukun-aboutus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dukun-aboutus.png"; sourceTree = "<group>"; };
+		659BB9AB1B42B8E900C4E670 /* pembatas-aboutus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pembatas-aboutus.png"; sourceTree = "<group>"; };
 		65A9440A1B22FE2400B88456 /* WETON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WETON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A9440E1B22FE2400B88456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A9440F1B22FE2400B88456 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -109,7 +113,9 @@
 		65A9440D1B22FE2400B88456 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6555CD6B1B3C01A900375E0C /* dukunAbout.png */,
+				659BB9AB1B42B8E900C4E670 /* pembatas-aboutus.png */,
+				659BB9A71B42A3E000C4E670 /* logo-aboutus.png */,
+				659BB9A91B42A4B100C4E670 /* dukun-aboutus.png */,
 				653F981C1B3A7A30004A26BE /* dukun.png */,
 				6555CD661B3BFA7700375E0C /* arrowAbout.png */,
 				650286E01B294EDD000D59B7 /* mbuh.json */,
@@ -218,11 +224,13 @@
 			files = (
 				65A9441C1B22FE2400B88456 /* Main.storyboard in Resources */,
 				650286E11B294EDD000D59B7 /* mbuh.json in Resources */,
-				6555CD6C1B3C01A900375E0C /* dukunAbout.png in Resources */,
+				659BB9AA1B42A4B100C4E670 /* dukun-aboutus.png in Resources */,
 				653F981D1B3A7A30004A26BE /* dukun.png in Resources */,
+				659BB9A81B42A3E000C4E670 /* logo-aboutus.png in Resources */,
 				6555CD671B3BFA7700375E0C /* arrowAbout.png in Resources */,
 				65A944211B22FE2400B88456 /* LaunchScreen.xib in Resources */,
 				65A9441E1B22FE2400B88456 /* Images.xcassets in Resources */,
+				659BB9AC1B42B8E900C4E670 /* pembatas-aboutus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
