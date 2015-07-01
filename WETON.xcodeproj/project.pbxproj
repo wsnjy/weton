@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		650286E11B294EDD000D59B7 /* mbuh.json in Resources */ = {isa = PBXBuildFile; fileRef = 650286E01B294EDD000D59B7 /* mbuh.json */; };
 		653F981D1B3A7A30004A26BE /* dukun.png in Resources */ = {isa = PBXBuildFile; fileRef = 653F981C1B3A7A30004A26BE /* dukun.png */; };
+		654B51FE1B43B92000A43F9D /* wisnu.png in Resources */ = {isa = PBXBuildFile; fileRef = 654B51FC1B43B92000A43F9D /* wisnu.png */; };
+		654B51FF1B43B92000A43F9D /* ucil.png in Resources */ = {isa = PBXBuildFile; fileRef = 654B51FD1B43B92000A43F9D /* ucil.png */; };
 		6555CD671B3BFA7700375E0C /* arrowAbout.png in Resources */ = {isa = PBXBuildFile; fileRef = 6555CD661B3BFA7700375E0C /* arrowAbout.png */; };
 		6555CD6A1B3BFAD600375E0C /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6555CD691B3BFAD600375E0C /* AboutController.m */; };
 		659BB9A81B42A3E000C4E670 /* logo-aboutus.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BB9A71B42A3E000C4E670 /* logo-aboutus.png */; };
@@ -36,6 +38,8 @@
 /* Begin PBXFileReference section */
 		650286E01B294EDD000D59B7 /* mbuh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mbuh.json; sourceTree = "<group>"; };
 		653F981C1B3A7A30004A26BE /* dukun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dukun.png; sourceTree = "<group>"; };
+		654B51FC1B43B92000A43F9D /* wisnu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wisnu.png; sourceTree = "<group>"; };
+		654B51FD1B43B92000A43F9D /* ucil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ucil.png; sourceTree = "<group>"; };
 		6555CD661B3BFA7700375E0C /* arrowAbout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrowAbout.png; sourceTree = "<group>"; };
 		6555CD681B3BFAD600375E0C /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		6555CD691B3BFAD600375E0C /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 		65A9440D1B22FE2400B88456 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				654B51FC1B43B92000A43F9D /* wisnu.png */,
+				654B51FD1B43B92000A43F9D /* ucil.png */,
 				659BB9AB1B42B8E900C4E670 /* pembatas-aboutus.png */,
 				659BB9A71B42A3E000C4E670 /* logo-aboutus.png */,
 				659BB9A91B42A4B100C4E670 /* dukun-aboutus.png */,
@@ -224,11 +230,13 @@
 			files = (
 				65A9441C1B22FE2400B88456 /* Main.storyboard in Resources */,
 				650286E11B294EDD000D59B7 /* mbuh.json in Resources */,
+				654B51FE1B43B92000A43F9D /* wisnu.png in Resources */,
 				659BB9AA1B42A4B100C4E670 /* dukun-aboutus.png in Resources */,
 				653F981D1B3A7A30004A26BE /* dukun.png in Resources */,
 				659BB9A81B42A3E000C4E670 /* logo-aboutus.png in Resources */,
 				6555CD671B3BFA7700375E0C /* arrowAbout.png in Resources */,
 				65A944211B22FE2400B88456 /* LaunchScreen.xib in Resources */,
+				654B51FF1B43B92000A43F9D /* ucil.png in Resources */,
 				65A9441E1B22FE2400B88456 /* Images.xcassets in Resources */,
 				659BB9AC1B42B8E900C4E670 /* pembatas-aboutus.png in Resources */,
 			);
