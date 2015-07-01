@@ -12,6 +12,7 @@
 		65212BDF1B43DFC0006529D6 /* lingkaran-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 65212BDE1B43DFC0006529D6 /* lingkaran-background.png */; };
 		65212BE21B43F277006529D6 /* border_bawah.png in Resources */ = {isa = PBXBuildFile; fileRef = 65212BE01B43F277006529D6 /* border_bawah.png */; };
 		65212BE31B43F277006529D6 /* border_atas.png in Resources */ = {isa = PBXBuildFile; fileRef = 65212BE11B43F277006529D6 /* border_atas.png */; };
+		65212BE61B43F574006529D6 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65212BE51B43F574006529D6 /* ResultViewController.m */; };
 		653F981D1B3A7A30004A26BE /* dukun.png in Resources */ = {isa = PBXBuildFile; fileRef = 653F981C1B3A7A30004A26BE /* dukun.png */; };
 		654B51FE1B43B92000A43F9D /* wisnu.png in Resources */ = {isa = PBXBuildFile; fileRef = 654B51FC1B43B92000A43F9D /* wisnu.png */; };
 		654B51FF1B43B92000A43F9D /* ucil.png in Resources */ = {isa = PBXBuildFile; fileRef = 654B51FD1B43B92000A43F9D /* ucil.png */; };
@@ -45,6 +46,8 @@
 		65212BDE1B43DFC0006529D6 /* lingkaran-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lingkaran-background.png"; sourceTree = "<group>"; };
 		65212BE01B43F277006529D6 /* border_bawah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_bawah.png; sourceTree = "<group>"; };
 		65212BE11B43F277006529D6 /* border_atas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_atas.png; sourceTree = "<group>"; };
+		65212BE41B43F574006529D6 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		65212BE51B43F574006529D6 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		653F981C1B3A7A30004A26BE /* dukun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dukun.png; sourceTree = "<group>"; };
 		654B51FC1B43B92000A43F9D /* wisnu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wisnu.png; sourceTree = "<group>"; };
 		654B51FD1B43B92000A43F9D /* ucil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ucil.png; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				65A9440D1B22FE2400B88456 /* Supporting Files */,
 				6555CD681B3BFAD600375E0C /* AboutController.h */,
 				6555CD691B3BFAD600375E0C /* AboutController.m */,
+				65212BE41B43F574006529D6 /* ResultViewController.h */,
+				65212BE51B43F574006529D6 /* ResultViewController.m */,
 			);
 			path = WETON;
 			sourceTree = "<group>";
@@ -275,6 +280,7 @@
 				65A944131B22FE2400B88456 /* AppDelegate.m in Sources */,
 				65A944191B22FE2400B88456 /* ViewController.m in Sources */,
 				65A944101B22FE2400B88456 /* main.m in Sources */,
+				65212BE61B43F574006529D6 /* ResultViewController.m in Sources */,
 				6555CD6A1B3BFAD600375E0C /* AboutController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
