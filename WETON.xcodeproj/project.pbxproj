@@ -21,6 +21,8 @@
 		659BB9A81B42A3E000C4E670 /* logo-aboutus.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BB9A71B42A3E000C4E670 /* logo-aboutus.png */; };
 		659BB9AA1B42A4B100C4E670 /* dukun-aboutus.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BB9A91B42A4B100C4E670 /* dukun-aboutus.png */; };
 		659BB9AC1B42B8E900C4E670 /* pembatas-aboutus.png in Resources */ = {isa = PBXBuildFile; fileRef = 659BB9AB1B42B8E900C4E670 /* pembatas-aboutus.png */; };
+		65A75ED11B450F8100943011 /* dukun-fc.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A75ED01B450F8100943011 /* dukun-fc.png */; };
+		65A75EE11B4543B300943011 /* logo-menubar.png in Resources */ = {isa = PBXBuildFile; fileRef = 65A75EE01B4543B300943011 /* logo-menubar.png */; };
 		65A944101B22FE2400B88456 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9440F1B22FE2400B88456 /* main.m */; };
 		65A944131B22FE2400B88456 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A944121B22FE2400B88456 /* AppDelegate.m */; };
 		65A944191B22FE2400B88456 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A944181B22FE2400B88456 /* ViewController.m */; };
@@ -57,6 +59,8 @@
 		659BB9A71B42A3E000C4E670 /* logo-aboutus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-aboutus.png"; sourceTree = "<group>"; };
 		659BB9A91B42A4B100C4E670 /* dukun-aboutus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dukun-aboutus.png"; sourceTree = "<group>"; };
 		659BB9AB1B42B8E900C4E670 /* pembatas-aboutus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pembatas-aboutus.png"; sourceTree = "<group>"; };
+		65A75ED01B450F8100943011 /* dukun-fc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dukun-fc.png"; sourceTree = "<group>"; };
+		65A75EE01B4543B300943011 /* logo-menubar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-menubar.png"; sourceTree = "<group>"; };
 		65A9440A1B22FE2400B88456 /* WETON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WETON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A9440E1B22FE2400B88456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A9440F1B22FE2400B88456 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		65A9440D1B22FE2400B88456 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65A75EE01B4543B300943011 /* logo-menubar.png */,
+				65A75ED01B450F8100943011 /* dukun-fc.png */,
 				65212BE01B43F277006529D6 /* border_bawah.png */,
 				65212BE11B43F277006529D6 /* border_atas.png */,
 				65212BDC1B43D726006529D6 /* ornament.png */,
@@ -251,12 +257,14 @@
 				65212BE21B43F277006529D6 /* border_bawah.png in Resources */,
 				654B51FE1B43B92000A43F9D /* wisnu.png in Resources */,
 				65212BE31B43F277006529D6 /* border_atas.png in Resources */,
+				65A75EE11B4543B300943011 /* logo-menubar.png in Resources */,
 				659BB9AA1B42A4B100C4E670 /* dukun-aboutus.png in Resources */,
 				653F981D1B3A7A30004A26BE /* dukun.png in Resources */,
 				659BB9A81B42A3E000C4E670 /* logo-aboutus.png in Resources */,
 				6555CD671B3BFA7700375E0C /* arrowAbout.png in Resources */,
 				65212BDD1B43D726006529D6 /* ornament.png in Resources */,
 				65A944211B22FE2400B88456 /* LaunchScreen.xib in Resources */,
+				65A75ED11B450F8100943011 /* dukun-fc.png in Resources */,
 				654B51FF1B43B92000A43F9D /* ucil.png in Resources */,
 				65A9441E1B22FE2400B88456 /* Images.xcassets in Resources */,
 				659BB9AC1B42B8E900C4E670 /* pembatas-aboutus.png in Resources */,

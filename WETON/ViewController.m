@@ -123,6 +123,7 @@
     [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
     textFieldDate.delegate = self;
     
+    [textDeskripsi scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
