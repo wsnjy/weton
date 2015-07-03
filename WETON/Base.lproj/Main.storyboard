@@ -550,6 +550,32 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwt-Xe-83g">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dukun-fullbody.png" translatesAutoresizingMaskIntoConstraints="NO" id="uP5-Xi-Wmd">
+                                        <rect key="frame" x="175" y="175" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="LwV-Nj-t0h"/>
+                                            <constraint firstAttribute="width" constant="250" id="TJb-MM-8mU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tungku.png" translatesAutoresizingMaskIntoConstraints="NO" id="o9p-P4-mtb">
+                                        <rect key="frame" x="180" y="322" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="5G2-gP-5cm"/>
+                                            <constraint firstAttribute="height" constant="128" id="tMW-PX-SnY"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3529411764705882" green="0.066666666666666666" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="uP5-Xi-Wmd" secondAttribute="centerX" id="RCb-SH-hAw"/>
+                                    <constraint firstAttribute="centerX" secondItem="o9p-P4-mtb" secondAttribute="centerX" id="XUk-Uh-0Gu"/>
+                                    <constraint firstItem="uP5-Xi-Wmd" firstAttribute="top" secondItem="cwt-Xe-83g" secondAttribute="top" constant="175" id="fZn-kB-K8y"/>
+                                    <constraint firstItem="o9p-P4-mtb" firstAttribute="top" secondItem="cwt-Xe-83g" secondAttribute="top" constant="322" id="zr7-6W-A2n"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.3529411764705882" green="0.066666666666666666" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -557,12 +583,16 @@
                             <constraint firstItem="9cl-zU-BJd" firstAttribute="leading" secondItem="sG7-La-q5R" secondAttribute="leadingMargin" id="3B3-mg-I8n"/>
                             <constraint firstItem="PHW-l6-S8H" firstAttribute="leading" secondItem="sG7-La-q5R" secondAttribute="leadingMargin" id="3C0-0Y-bwS"/>
                             <constraint firstItem="abC-Sk-aD7" firstAttribute="leading" secondItem="sG7-La-q5R" secondAttribute="leadingMargin" id="53C-ib-mqb"/>
+                            <constraint firstAttribute="trailing" secondItem="cwt-Xe-83g" secondAttribute="trailing" id="5jQ-mD-1i7"/>
                             <constraint firstItem="kg1-3Z-ATc" firstAttribute="leading" secondItem="9cl-zU-BJd" secondAttribute="trailing" constant="8" id="6n7-U2-HUi"/>
                             <constraint firstItem="PHW-l6-S8H" firstAttribute="trailing" secondItem="sG7-La-q5R" secondAttribute="trailingMargin" id="71h-Qg-FjL"/>
                             <constraint firstItem="abC-Sk-aD7" firstAttribute="trailing" secondItem="sG7-La-q5R" secondAttribute="trailingMargin" id="7Nq-Dp-ZpP"/>
+                            <constraint firstItem="cwt-Xe-83g" firstAttribute="top" secondItem="sG7-La-q5R" secondAttribute="top" id="O0c-Ym-t7P"/>
+                            <constraint firstItem="cwt-Xe-83g" firstAttribute="leading" secondItem="sG7-La-q5R" secondAttribute="leading" id="Oha-Xv-kKK"/>
                             <constraint firstItem="eX1-47-noP" firstAttribute="top" secondItem="qzj-OA-Q54" secondAttribute="bottom" constant="10" id="Vl9-EB-0yk"/>
                             <constraint firstItem="hJj-pk-YYd" firstAttribute="top" secondItem="PHW-l6-S8H" secondAttribute="bottom" constant="11" id="aeC-zD-WrI"/>
                             <constraint firstItem="ogF-Wq-lst" firstAttribute="trailing" secondItem="sG7-La-q5R" secondAttribute="trailingMargin" id="ak6-aq-fHC"/>
+                            <constraint firstItem="hJj-pk-YYd" firstAttribute="top" secondItem="cwt-Xe-83g" secondAttribute="bottom" id="cx4-gH-rWJ"/>
                             <constraint firstItem="qzj-OA-Q54" firstAttribute="trailing" secondItem="sG7-La-q5R" secondAttribute="trailingMargin" id="eXP-5v-tfP"/>
                             <constraint firstItem="abC-Sk-aD7" firstAttribute="top" secondItem="eX1-47-noP" secondAttribute="bottom" constant="16" id="fEL-Rd-0D8"/>
                             <constraint firstItem="qzj-OA-Q54" firstAttribute="top" secondItem="Uz3-4C-Zyg" secondAttribute="bottom" constant="15" id="i8Q-3h-wCn"/>
@@ -604,11 +634,47 @@
                         <outlet property="lblTglLahir" destination="qzj-OA-Q54" id="jPw-a2-X4J"/>
                         <outlet property="lblWeton" destination="ogF-Wq-lst" id="Xx8-hl-gYX"/>
                         <outlet property="textResult" destination="kg1-3Z-ATc" id="Xy4-hX-gks"/>
+                        <outlet property="viewLoader" destination="cwt-Xe-83g" id="UjR-D1-hUU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Baa-rR-G57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1321" y="1127"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yLz-No-g33">
+            <objects>
+                <navigationController id="R2f-OY-NH8" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZYi-IV-yz0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="k5o-sQ-I3B" kind="relationship" relationship="rootViewController" id="epq-dL-6i2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EZa-cO-SHv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-662" y="1238"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="enN-BU-TMC">
+            <objects>
+                <viewController id="k5o-sQ-I3B" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jYr-73-ggO"/>
+                        <viewControllerLayoutGuide type="bottom" id="bSb-oi-zac"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LQE-HV-qxU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BCr-4d-o5K"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rwl-iL-D8G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="1190"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qRJ-02-x9N">
@@ -842,10 +908,12 @@
         <image name="border_bawah.png" width="576" height="19"/>
         <image name="dukun-aboutus.png" width="329" height="252"/>
         <image name="dukun-fc.png" width="329" height="249"/>
+        <image name="dukun-fullbody.png" width="579" height="520"/>
         <image name="lingkaran-background.png" width="576" height="49"/>
         <image name="logo-aboutus.png" width="260" height="140"/>
         <image name="logo-menubar.png" width="132" height="34"/>
         <image name="ornament.png" width="351" height="182"/>
+        <image name="tungku.png" width="409" height="263"/>
         <image name="ucil.png" width="180" height="226"/>
         <image name="wisnu.png" width="180" height="236"/>
     </resources>

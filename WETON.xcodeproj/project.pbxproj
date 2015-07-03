@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		650286E11B294EDD000D59B7 /* mbuh.json in Resources */ = {isa = PBXBuildFile; fileRef = 650286E01B294EDD000D59B7 /* mbuh.json */; };
+		651A03891B468C7800BC0FFA /* tungku.png in Resources */ = {isa = PBXBuildFile; fileRef = 651A03871B468C7800BC0FFA /* tungku.png */; };
+		651A038A1B468C7800BC0FFA /* dukun-fullbody.png in Resources */ = {isa = PBXBuildFile; fileRef = 651A03881B468C7800BC0FFA /* dukun-fullbody.png */; };
 		65212BDD1B43D726006529D6 /* ornament.png in Resources */ = {isa = PBXBuildFile; fileRef = 65212BDC1B43D726006529D6 /* ornament.png */; };
 		65212BDF1B43DFC0006529D6 /* lingkaran-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 65212BDE1B43DFC0006529D6 /* lingkaran-background.png */; };
 		65212BE21B43F277006529D6 /* border_bawah.png in Resources */ = {isa = PBXBuildFile; fileRef = 65212BE01B43F277006529D6 /* border_bawah.png */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		650286E01B294EDD000D59B7 /* mbuh.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mbuh.json; sourceTree = "<group>"; };
+		651A03871B468C7800BC0FFA /* tungku.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tungku.png; sourceTree = "<group>"; };
+		651A03881B468C7800BC0FFA /* dukun-fullbody.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dukun-fullbody.png"; sourceTree = "<group>"; };
 		65212BDC1B43D726006529D6 /* ornament.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ornament.png; sourceTree = "<group>"; };
 		65212BDE1B43DFC0006529D6 /* lingkaran-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lingkaran-background.png"; sourceTree = "<group>"; };
 		65212BE01B43F277006529D6 /* border_bawah.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = border_bawah.png; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 		65A9440D1B22FE2400B88456 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				651A03871B468C7800BC0FFA /* tungku.png */,
+				651A03881B468C7800BC0FFA /* dukun-fullbody.png */,
 				65A75EE01B4543B300943011 /* logo-menubar.png */,
 				65A75ED01B450F8100943011 /* dukun-fc.png */,
 				65212BE01B43F277006529D6 /* border_bawah.png */,
@@ -253,6 +259,7 @@
 			files = (
 				65A9441C1B22FE2400B88456 /* Main.storyboard in Resources */,
 				650286E11B294EDD000D59B7 /* mbuh.json in Resources */,
+				651A038A1B468C7800BC0FFA /* dukun-fullbody.png in Resources */,
 				65212BDF1B43DFC0006529D6 /* lingkaran-background.png in Resources */,
 				65212BE21B43F277006529D6 /* border_bawah.png in Resources */,
 				654B51FE1B43B92000A43F9D /* wisnu.png in Resources */,
@@ -264,6 +271,7 @@
 				6555CD671B3BFA7700375E0C /* arrowAbout.png in Resources */,
 				65212BDD1B43D726006529D6 /* ornament.png in Resources */,
 				65A944211B22FE2400B88456 /* LaunchScreen.xib in Resources */,
+				651A03891B468C7800BC0FFA /* tungku.png in Resources */,
 				65A75ED11B450F8100943011 /* dukun-fc.png in Resources */,
 				654B51FF1B43B92000A43F9D /* ucil.png in Resources */,
 				65A9441E1B22FE2400B88456 /* Images.xcassets in Resources */,

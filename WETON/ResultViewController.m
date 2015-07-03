@@ -12,6 +12,7 @@
 @property (weak, nonatomic) IBOutlet UITextView *textResult;
 @property (weak, nonatomic) IBOutlet UILabel *lblTglLahir;
 @property (weak, nonatomic) IBOutlet UILabel *lblWeton;
+@property (weak, nonatomic) IBOutlet UIView *viewLoader;
 
 @end
 
@@ -19,6 +20,7 @@
 @synthesize textResult;
 @synthesize lblTglLahir, lblWeton;
 @synthesize stringHasil, stringTglLahir, stringWeton;
+@synthesize viewLoader;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +29,8 @@
     textResult.text = stringHasil;
     lblTglLahir.text = stringTglLahir;
     lblWeton.text = stringWeton;
+    
+    
     
 }
 
