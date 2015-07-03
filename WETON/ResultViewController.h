@@ -10,4 +10,8 @@
 
 @interface ResultViewController : UIViewController
 
+@property (nonatomic, retain) NSString *stringHasil;
+@property (nonatomic, retain) NSString *stringTglLahir;
+@property (nonatomic, retain) NSString *stringWeton;
+
 @end

@@ -9,17 +9,27 @@
 #import "ResultViewController.h"
 
 @interface ResultViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textResult;
+@property (weak, nonatomic) IBOutlet UILabel *lblTglLahir;
+@property (weak, nonatomic) IBOutlet UILabel *lblWeton;
 
 @end
 
 @implementation ResultViewController
+@synthesize textResult;
+@synthesize lblTglLahir, lblWeton;
+@synthesize stringHasil, stringTglLahir, stringWeton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
+    [textResult scrollRangeToVisible:NSMakeRange(0, 1)];
+    textResult.text = stringHasil;
+    lblTglLahir.text = stringTglLahir;
+    lblWeton.text = stringWeton;
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ResultViewController.h"
 
 @interface ViewController ()
 
@@ -18,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnCari;
 @property (weak, nonatomic) IBOutlet UIView *viewDeskripsi;
 @property (weak, nonatomic) IBOutlet UITextView *textDeskripsi;
+@property (nonatomic, retain) NSString *stringHasil;
+@property (nonatomic, retain) NSString *stringTglLahir;
+@property (nonatomic, retain) NSString *stringWeton;
 
 @end
 
@@ -29,6 +33,7 @@
 @synthesize viewDatePicker;
 @synthesize btnCari;
 @synthesize viewDeskripsi, textDeskripsi;
+@synthesize stringHasil, stringTglLahir, stringWeton;
 
 - (IBAction)cancelBarDatePicker:(id)sender {
     
@@ -98,11 +103,9 @@
     
     NSString *weton_lengkap = [NSString stringWithFormat:@"%@ %@",[self convertNamaHari:dayName],wetonnya];
     
-    NSLog(@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@ \n %@",day,[self bulan:month],year,weton_lengkap, [[self getLocalJson:weton_lengkap] objectForKey:@"deskripsi"]);
-    NSString *stringHasil = [NSString stringWithFormat:@"Berdasarkan informasi tanggal lahir yang anda masukkan %@ %@ %@ \n Wetonnya adalah %@ \n %@",day,[self bulan:month],year,weton_lengkap, [[self getLocalJson:weton_lengkap] objectForKey:@"deskripsi"]];
-    
-    textDeskripsi.text = stringHasil;
-    
+    stringHasil = [NSString stringWithFormat:@"%@",[[self getLocalJson:weton_lengkap] objectForKey:@"deskripsi"]];
+    stringTglLahir = [NSString stringWithFormat:@"%@ %@ %@",day,[self bulan:month],year];
+    stringWeton = weton_lengkap;
     
 }
 
@@ -123,7 +126,7 @@
     [datePicker addTarget:self action:@selector(updateTextField:) forControlEvents:UIControlEventValueChanged];
     textFieldDate.delegate = self;
     
-    [textDeskripsi scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:NO];
+    [textDeskripsi scrollRangeToVisible:NSMakeRange(0, 1)];
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -135,11 +138,9 @@
 
 -(void)updateTextField:(id)sender
 {
-//    UIDatePicker *picker = (UIDatePicker*)textFieldDate.inputView;
     NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
     [dateFormat setTimeZone:[NSTimeZone localTimeZone]];
     [dateFormat setDateFormat:@"dd MMMM YYYY"];
-//    [dateFormat setDateFormat:@"dd-MM-YYYY"];
     NSString *date = [dateFormat stringFromDate:datePicker.date];
     textFieldDate.text = [NSString stringWithFormat:@"%@",date];
 
@@ -222,6 +223,19 @@
     return namaHari;
     
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"showResultSegue"]){
+        
+        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
+        ResultViewController *controller = (ResultViewController *)navController.topViewController;
+        controller.stringHasil = stringHasil;
+        controller.stringTglLahir = stringTglLahir;
+        controller.stringWeton = stringWeton;
+
+    }
+}
+
 
 
 

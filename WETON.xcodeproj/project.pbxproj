@@ -119,14 +119,14 @@
 				65A944121B22FE2400B88456 /* AppDelegate.m */,
 				65A944171B22FE2400B88456 /* ViewController.h */,
 				65A944181B22FE2400B88456 /* ViewController.m */,
+				65212BE41B43F574006529D6 /* ResultViewController.h */,
+				65212BE51B43F574006529D6 /* ResultViewController.m */,
 				65A9441A1B22FE2400B88456 /* Main.storyboard */,
 				65A9441D1B22FE2400B88456 /* Images.xcassets */,
 				65A9441F1B22FE2400B88456 /* LaunchScreen.xib */,
 				65A9440D1B22FE2400B88456 /* Supporting Files */,
 				6555CD681B3BFAD600375E0C /* AboutController.h */,
 				6555CD691B3BFAD600375E0C /* AboutController.m */,
-				65212BE41B43F574006529D6 /* ResultViewController.h */,
-				65212BE51B43F574006529D6 /* ResultViewController.m */,
 			);
 			path = WETON;
 			sourceTree = "<group>";
