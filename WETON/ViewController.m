@@ -9,6 +9,21 @@
 #import "ViewController.h"
 #import "ResultViewController.h"
 
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_RETINA ([[UIScreen mainScreen] scale] >= 2.0)
+
+#define SCREEN_WIDTH ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT ([[UIScreen mainScreen] bounds].size.height)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define SCREEN_MIN_LENGTH (MIN(SCREEN_WIDTH, SCREEN_HEIGHT))
+
+#define IS_IPHONE_4_OR_LESS (IS_IPHONE && SCREEN_MAX_LENGTH < 568.0)
+#define IS_IPHONE_5 (IS_IPHONE && SCREEN_MAX_LENGTH == 568.0)
+#define IS_IPHONE_6 (IS_IPHONE && SCREEN_MAX_LENGTH == 667.0)
+#define IS_IPHONE_6P (IS_IPHONE && SCREEN_MAX_LENGTH == 736.0)
+
+
 @interface ViewController ()
 
 @property (nonatomic, retain) NSString *deskripsi_weton;
@@ -22,6 +37,7 @@
 @property (nonatomic, retain) NSString *stringHasil;
 @property (nonatomic, retain) NSString *stringTglLahir;
 @property (nonatomic, retain) NSString *stringWeton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *aboutButton;
 
 @end
 
@@ -34,6 +50,32 @@
 @synthesize btnCari;
 @synthesize viewDeskripsi, textDeskripsi;
 @synthesize stringHasil, stringTglLahir, stringWeton;
+@synthesize aboutButton;
+
+
+- (IBAction)aboutButtonAction:(id)sender {
+    
+    
+    if(IS_IPHONE)
+    {
+        if (IS_IPHONE_5 || IS_IPHONE_6 || IS_IPHONE_6P){
+            [self performSegueWithIdentifier:@"showAboutSegue" sender:sender];
+            
+        }else{
+            [self performSegueWithIdentifier:@"showAboutSegue2" sender:sender];
+            //iphone 3.5 inch screen
+        }
+    }else{
+        //[ipad]
+        [self performSegueWithIdentifier:@"showAboutSegue2" sender:sender];
+    }
+    
+    NSLog(@"go to About");
+    if ([[ UIScreen mainScreen ] bounds ].size.height > 568 ) {
+    }else{
+    }
+    
+}
 
 - (IBAction)cancelBarDatePicker:(id)sender {
     
@@ -233,6 +275,10 @@
         controller.stringTglLahir = stringTglLahir;
         controller.stringWeton = stringWeton;
 
+    }else if([segue.identifier isEqualToString:@"showAboutSegue"]){
+
+    }else if([segue.identifier isEqualToString:@"showAboutSegue2"]){
+        
     }
 }
 

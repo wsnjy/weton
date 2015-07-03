@@ -222,15 +222,23 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="lka-fg-qut">
+                            <connections>
+                                <action selector="aboutButtonAction:" destination="VLh-7C-W7X" id="hdL-Yn-lsc"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="Done" destination="9qm-WW-VVW" id="MFd-Zf-5FL"/>
+                        <outlet property="aboutButton" destination="lka-fg-qut" id="vK1-gt-YAz"/>
                         <outlet property="btnCari" destination="QuB-Jw-SGe" id="VzF-62-o7M"/>
                         <outlet property="cancel" destination="fnO-8s-pyv" id="f4c-oJ-KS7"/>
                         <outlet property="datePicker" destination="Hp3-bk-FLN" id="nhu-2B-32T"/>
                         <outlet property="textDeskripsi" destination="hid-hF-icI" id="3E4-uZ-d5P"/>
                         <outlet property="textFieldDate" destination="44N-Lg-vvh" id="LNX-oA-Drx"/>
                         <outlet property="viewDatePicker" destination="yjx-kA-XXz" id="cSN-Yq-IMj"/>
+                        <segue destination="wwJ-ob-Eil" kind="custom" identifier="showAboutSegue" id="Hk5-5y-ube"/>
+                        <segue destination="RhD-nE-ejr" kind="custom" identifier="showAboutSegue2" id="Eeq-JJ-wYu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faj-9l-Thq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -251,7 +259,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbT-xs-Msi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-520" y="3"/>
+            <point key="canvasLocation" x="-1056" y="-579"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="bK2-lC-UoQ">
@@ -460,7 +468,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ppl-qA-pf8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="220" y="-33"/>
+            <point key="canvasLocation" x="376" y="-579"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LH7-Vx-bMT">
@@ -476,7 +484,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULk-iy-EF1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1952" y="497"/>
+            <point key="canvasLocation" x="-2002" y="1127"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="XgQ-aZ-dZi">
@@ -590,6 +598,7 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="2eE-hU-3OZ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="lblTglLahir" destination="qzj-OA-Q54" id="jPw-a2-X4J"/>
@@ -599,7 +608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Baa-rR-G57" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1271" y="497"/>
+            <point key="canvasLocation" x="-1321" y="1127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qRJ-02-x9N">
@@ -615,7 +624,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wwv-Cv-1vR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="54" y="731"/>
+            <point key="canvasLocation" x="-1056" y="319"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="7fE-J4-hud">
@@ -824,7 +833,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mmz-yY-NEC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="731" y="759"/>
+            <point key="canvasLocation" x="403" y="301"/>
         </scene>
     </scenes>
     <resources>
