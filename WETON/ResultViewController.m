@@ -30,6 +30,7 @@
     lblTglLahir.text = stringTglLahir;
     lblWeton.text = stringWeton;
     
+    viewLoader.hidden = YES;
     
     
 }
