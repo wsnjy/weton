@@ -269,8 +269,7 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"showResultSegue"]){
         
-        UINavigationController *navController = (UINavigationController *)segue.destinationViewController;
-        ResultViewController *controller = (ResultViewController *)navController.topViewController;
+        ResultViewController *controller = (ResultViewController *)segue.destinationViewController;
         controller.stringHasil = stringHasil;
         controller.stringTglLahir = stringTglLahir;
         controller.stringWeton = stringWeton;

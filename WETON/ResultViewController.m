@@ -32,9 +32,35 @@
     
     viewLoader.hidden = YES;
     
+    UIButton *buttonLeft =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonLeft setImage:[UIImage imageNamed:@"back-button"] forState:UIControlStateNormal];
+    [buttonLeft addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [buttonLeft setFrame:CGRectMake(0, 0, 22, 22)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonLeft];
+
+    UIButton *buttonRight =  [UIButton buttonWithType:UIButtonTypeCustom];
+    [buttonRight setImage:[UIImage imageNamed:@"home-button"] forState:UIControlStateNormal];
+    [buttonRight addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+    [buttonRight setFrame:CGRectMake(0, 0, 22, 22)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonRight];
+
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+ 
+    
+}
+
+- (void)back{
+    NSLog(@"pop");
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
+- (void)goToHome{
+    NSLog(@"home");
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

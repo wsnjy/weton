@@ -32,6 +32,8 @@
 		65A9441E1B22FE2400B88456 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65A9441D1B22FE2400B88456 /* Images.xcassets */; };
 		65A944211B22FE2400B88456 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A9441F1B22FE2400B88456 /* LaunchScreen.xib */; };
 		65A9442D1B22FE2400B88456 /* WETONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9442C1B22FE2400B88456 /* WETONTests.m */; };
+		65DD06A31B4A3DE100E3DED5 /* home-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DD06A11B4A3DE100E3DED5 /* home-button.png */; };
+		65DD06A41B4A3DE100E3DED5 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DD06A21B4A3DE100E3DED5 /* back-button.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		65A944261B22FE2400B88456 /* WETONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WETONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65A9442B1B22FE2400B88456 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65A9442C1B22FE2400B88456 /* WETONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WETONTests.m; sourceTree = "<group>"; };
+		65DD06A11B4A3DE100E3DED5 /* home-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-button.png"; sourceTree = "<group>"; };
+		65DD06A21B4A3DE100E3DED5 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,8 @@
 		65A9440D1B22FE2400B88456 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65DD06A11B4A3DE100E3DED5 /* home-button.png */,
+				65DD06A21B4A3DE100E3DED5 /* back-button.png */,
 				651A03871B468C7800BC0FFA /* tungku.png */,
 				651A03881B468C7800BC0FFA /* dukun-fullbody.png */,
 				65A75EE01B4543B300943011 /* logo-menubar.png */,
@@ -262,6 +268,7 @@
 				651A038A1B468C7800BC0FFA /* dukun-fullbody.png in Resources */,
 				65212BDF1B43DFC0006529D6 /* lingkaran-background.png in Resources */,
 				65212BE21B43F277006529D6 /* border_bawah.png in Resources */,
+				65DD06A41B4A3DE100E3DED5 /* back-button.png in Resources */,
 				654B51FE1B43B92000A43F9D /* wisnu.png in Resources */,
 				65212BE31B43F277006529D6 /* border_atas.png in Resources */,
 				65A75EE11B4543B300943011 /* logo-menubar.png in Resources */,
@@ -269,6 +276,7 @@
 				653F981D1B3A7A30004A26BE /* dukun.png in Resources */,
 				659BB9A81B42A3E000C4E670 /* logo-aboutus.png in Resources */,
 				6555CD671B3BFA7700375E0C /* arrowAbout.png in Resources */,
+				65DD06A31B4A3DE100E3DED5 /* home-button.png in Resources */,
 				65212BDD1B43D726006529D6 /* ornament.png in Resources */,
 				65A944211B22FE2400B88456 /* LaunchScreen.xib in Resources */,
 				651A03891B468C7800BC0FFA /* tungku.png in Resources */,
