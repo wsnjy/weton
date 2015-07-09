@@ -34,6 +34,7 @@
 		65A9442D1B22FE2400B88456 /* WETONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A9442C1B22FE2400B88456 /* WETONTests.m */; };
 		65DD06A31B4A3DE100E3DED5 /* home-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DD06A11B4A3DE100E3DED5 /* home-button.png */; };
 		65DD06A41B4A3DE100E3DED5 /* back-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 65DD06A21B4A3DE100E3DED5 /* back-button.png */; };
+		6614F1C44764D90844F5D990 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B0C9A587FFAC425D90F4CF45 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,9 @@
 		65A9442C1B22FE2400B88456 /* WETONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WETONTests.m; sourceTree = "<group>"; };
 		65DD06A11B4A3DE100E3DED5 /* home-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home-button.png"; sourceTree = "<group>"; };
 		65DD06A21B4A3DE100E3DED5 /* back-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back-button.png"; sourceTree = "<group>"; };
+		A31307042F744543DECBE2FA /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B0C9A587FFAC425D90F4CF45 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C063B03E3D100CD31C2557B4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6614F1C44764D90844F5D990 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +113,8 @@
 				65A9440C1B22FE2400B88456 /* WETON */,
 				65A944291B22FE2400B88456 /* WETONTests */,
 				65A9440B1B22FE2400B88456 /* Products */,
+				F12C08FD0B4228D728096022 /* Pods */,
+				974D1C2DCE7233E2E7E2E91C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -150,11 +157,11 @@
 				65A75ED01B450F8100943011 /* dukun-fc.png */,
 				65212BE01B43F277006529D6 /* border_bawah.png */,
 				65212BE11B43F277006529D6 /* border_atas.png */,
-				65212BDC1B43D726006529D6 /* ornament.png */,
 				65212BDE1B43DFC0006529D6 /* lingkaran-background.png */,
 				654B51FC1B43B92000A43F9D /* wisnu.png */,
 				654B51FD1B43B92000A43F9D /* ucil.png */,
 				659BB9AB1B42B8E900C4E670 /* pembatas-aboutus.png */,
+				65212BDC1B43D726006529D6 /* ornament.png */,
 				659BB9A71B42A3E000C4E670 /* logo-aboutus.png */,
 				659BB9A91B42A4B100C4E670 /* dukun-aboutus.png */,
 				653F981C1B3A7A30004A26BE /* dukun.png */,
@@ -183,6 +190,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		974D1C2DCE7233E2E7E2E91C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0C9A587FFAC425D90F4CF45 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F12C08FD0B4228D728096022 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A31307042F744543DECBE2FA /* Pods.debug.xcconfig */,
+				C063B03E3D100CD31C2557B4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,9 +214,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65A944301B22FE2400B88456 /* Build configuration list for PBXNativeTarget "WETON" */;
 			buildPhases = (
+				CB0E335E0904958D3824FB02 /* Check Pods Manifest.lock */,
 				65A944061B22FE2400B88456 /* Sources */,
 				65A944071B22FE2400B88456 /* Frameworks */,
 				65A944081B22FE2400B88456 /* Resources */,
+				58DEF210638724B5FB28EE2A /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,6 +321,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58DEF210638724B5FB28EE2A /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CB0E335E0904958D3824FB02 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		65A944061B22FE2400B88456 /* Sources */ = {
@@ -429,6 +488,7 @@
 		};
 		65A944311B22FE2400B88456 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A31307042F744543DECBE2FA /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WETON/Info.plist;
@@ -439,6 +499,7 @@
 		};
 		65A944321B22FE2400B88456 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C063B03E3D100CD31C2557B4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WETON/Info.plist;

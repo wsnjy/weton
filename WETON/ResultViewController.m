@@ -7,12 +7,16 @@
 //
 
 #import "ResultViewController.h"
+#import <pop/POP.h>
 
 @interface ResultViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textResult;
 @property (weak, nonatomic) IBOutlet UILabel *lblTglLahir;
 @property (weak, nonatomic) IBOutlet UILabel *lblWeton;
 @property (weak, nonatomic) IBOutlet UIView *viewLoader;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *DukunconsY;
+@property (nonatomic, assign) BOOL consValue;
+@property (nonatomic , retain) POPSpringAnimation *layoutAnimation;
 
 @end
 
@@ -21,6 +25,8 @@
 @synthesize lblTglLahir, lblWeton;
 @synthesize stringHasil, stringTglLahir, stringWeton;
 @synthesize viewLoader;
+@synthesize DukunconsY,consValue;
+@synthesize layoutAnimation;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -30,7 +36,7 @@
     lblTglLahir.text = stringTglLahir;
     lblWeton.text = stringWeton;
     
-    viewLoader.hidden = YES;
+//    viewLoader.hidden = YES;
     
     UIButton *buttonLeft =  [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonLeft setImage:[UIImage imageNamed:@"back-button"] forState:UIControlStateNormal];
@@ -43,7 +49,16 @@
     [buttonRight addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     [buttonRight setFrame:CGRectMake(0, 0, 22, 22)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonRight];
-
+    
+/*    POPSpringAnimation *basicAnimation = [POPSpringAnimation animation];
+    basicAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewFrame];
+    basicAnimation.toValue=[NSValue valueWithCGRect:CGRectMake(0, 0, 90, 190)];
+    basicAnimation.name=@"SomeAnimationNameYouChoose";
+    basicAnimation.delegate=self;
+    [_DukunconsY pop_addAnimation:basicAnimation forKey:@"WhatEverNameYouWant"];
+*/
+//    consValue = 175;
+    [self animateConstraint];
     
 }
 
@@ -65,6 +80,20 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)animateConstraint{
+    
+//    [DukunconsY pop_removeAnimationForKey:@"detailsContainerWidthAnimate"];
+    
+    layoutAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
+    layoutAnimation.springSpeed = 0.5;
+    layoutAnimation.springBounciness = 15;
+    layoutAnimation.toValue = @(100);
+    
+    [DukunconsY pop_addAnimation:layoutAnimation forKey:@"detailsContainerWidthAnimate"];
+
+
 }
 
 /*
