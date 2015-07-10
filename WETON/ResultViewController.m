@@ -15,7 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblWeton;
 @property (weak, nonatomic) IBOutlet UIView *viewLoader;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *DukunconsY;
-@property (nonatomic, assign) BOOL consValue;
+@property (nonatomic, assign) BOOL constante;
 @property (nonatomic , retain) POPSpringAnimation *layoutAnimation;
 
 @end
@@ -25,7 +25,7 @@
 @synthesize lblTglLahir, lblWeton;
 @synthesize stringHasil, stringTglLahir, stringWeton;
 @synthesize viewLoader;
-@synthesize DukunconsY,consValue;
+@synthesize DukunconsY,constante;
 @synthesize layoutAnimation;
 
 - (void)viewDidLoad {
@@ -35,8 +35,6 @@
     textResult.text = stringHasil;
     lblTglLahir.text = stringTglLahir;
     lblWeton.text = stringWeton;
-    
-//    viewLoader.hidden = YES;
     
     UIButton *buttonLeft =  [UIButton buttonWithType:UIButtonTypeCustom];
     [buttonLeft setImage:[UIImage imageNamed:@"back-button"] forState:UIControlStateNormal];
@@ -50,16 +48,13 @@
     [buttonRight setFrame:CGRectMake(0, 0, 22, 22)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:buttonRight];
     
-/*    POPSpringAnimation *basicAnimation = [POPSpringAnimation animation];
-    basicAnimation.property = [POPAnimatableProperty propertyWithName:kPOPViewFrame];
-    basicAnimation.toValue=[NSValue valueWithCGRect:CGRectMake(0, 0, 90, 190)];
-    basicAnimation.name=@"SomeAnimationNameYouChoose";
-    basicAnimation.delegate=self;
-    [_DukunconsY pop_addAnimation:basicAnimation forKey:@"WhatEverNameYouWant"];
-*/
-//    consValue = 175;
-    [self animateConstraint];
+    layoutAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
+    layoutAnimation.springSpeed = 0.1;
     
+    constante = YES;
+    [self performSelector:@selector(animateConstraint) withObject:self afterDelay:1.0 ];
+    [self performSelector:@selector(animateConstraint) withObject:self afterDelay:4.0 ];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -84,16 +79,21 @@
 
 - (void)animateConstraint{
     
-//    [DukunconsY pop_removeAnimationForKey:@"detailsContainerWidthAnimate"];
-    
-    layoutAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];
-    layoutAnimation.springSpeed = 0.5;
-    layoutAnimation.springBounciness = 15;
-    layoutAnimation.toValue = @(100);
-    
-    [DukunconsY pop_addAnimation:layoutAnimation forKey:@"detailsContainerWidthAnimate"];
+    if (constante == YES) {
+        layoutAnimation.springBounciness = 15;
+        layoutAnimation.toValue = @(75);
+        [DukunconsY pop_addAnimation:layoutAnimation forKey:@"detailsContainerWidthAnimate"];
+        constante = NO;
+    }else{
+        layoutAnimation.springBounciness = 1;
+        layoutAnimation.toValue = @(125);
+        [DukunconsY pop_addAnimation:layoutAnimation forKey:@"detailsContainerWidthAnimate"];
+        [self performSelector:@selector(showResult) withObject:self afterDelay:3.0 ];
+    }
+}
 
-
+- (void)showResult{
+    viewLoader.hidden = YES;
 }
 
 /*
