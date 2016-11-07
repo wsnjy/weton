@@ -1,5 +1,7 @@
 # weton
 
+![alt tag](http://im2.ezgif.com/tmp/ezgif-3258664855.gif)
+
 Mungkin sudah banyak aplikasi atau algoritma weton yang ada di github. Cuma mau bikin versi objective-c untuk app iPhone.
 
 Algoritma weton by @pujianto
