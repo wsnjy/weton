@@ -1,6 +1,6 @@
 # weton
 
-![alt tag](http://im2.ezgif.com/tmp/ezgif-3258664855.gif)
+![alt tag](http://i.imgur.com/Wq0jCiZ.gif)
 
 Mungkin sudah banyak aplikasi atau algoritma weton yang ada di github. Cuma mau bikin versi iOS app menggunakan Objective-C
 
